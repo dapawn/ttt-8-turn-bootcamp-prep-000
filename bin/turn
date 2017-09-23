@@ -6,4 +6,4 @@ require_relative '../lib/turn.rb'
 board = Array.new(9," ")
 #puts "board = #{board}"
 puts "Welcome to Tic Tac Toe!"
-turn()
+turn(board)
