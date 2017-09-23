@@ -1,1 +1,19 @@
 #!/usr/bin/env ruby
+
+require_relative '../lib/turn.rb'
+
+# Code your CLI Here
+board = Array.new(9," ")
+#puts "board = #{board}"
+puts "Welcome to Tic Tac Toe!"
+puts "Choose a postion, 1(upper left) - 9(bottom right)"
+input = gets.strip
+index = input_to_index(input)
+#puts "index = #{index}"
+until valid_move(board,index) do 
+  puts "That move is not valid, please choose a postion, 1(upper left) - 9(bottom right)"
+  input = gets.strip
+  index = input_to_index(input)
+end
+move(board,index)
+display_board(board)
