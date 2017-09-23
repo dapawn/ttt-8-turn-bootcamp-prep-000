@@ -10,7 +10,7 @@ puts "Choose a postion, 1(upper left) - 9(bottom right)"
 input = gets.strip
 index = input_to_index(input)
 #puts "index = #{index}"
-until valid_move(board,index) do 
+until valid_move(board,index) do
   puts "That move is not valid, please choose a postion, 1(upper left) - 9(bottom right)"
   input = gets.strip
   index = input_to_index(input)
